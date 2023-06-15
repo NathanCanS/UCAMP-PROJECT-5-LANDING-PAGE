@@ -1,0 +1,19 @@
+#container-footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#container-footer a {
+    color: white;
+}
+
+@media (min-width:240px) and (max-width:880px){
+    #container-footer {
+        position: absolute;
+    }
+
+}
