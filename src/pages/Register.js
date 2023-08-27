@@ -37,15 +37,15 @@ function Register() {
                 <Form.Group controlId="formBasicEmail">
                 <FormLabel className="mb-3 justify-content-md-center">Correo</FormLabel>
                 <br></br>
-                <input className="mb-3 justify-content-md-center" type='email' required name='username' onChange={(e) => setPassword(e.target.value)}/> 
+                <input className="mb-3 justify-content-md-center" type='email' required name='username' value={username} onChange={(e) => setUsername(e.target.value)}/> 
                 </Form.Group>
             
-            <Form.Group controlId="formBasicPassword">
+                <Form.Group controlId="formBasicPassword">
                 <FormLabel className="mb-3 justify-content-md-center">Contraseña</FormLabel>
                 <br></br>
-                <input className="mb-3 justify-content-md-center" type='password' required name='password' onChange={(e) => setPassword(e.target.value)}/>
-            </Form.Group>
-            <Button type="submit">Registrarse</Button>
+                <input className="mb-3 justify-content-md-center" type='password' required name='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                </Form.Group>
+                <Button type="submit">Registrarse</Button>
                 </Form>
             </Container>     
             <Footer/>   

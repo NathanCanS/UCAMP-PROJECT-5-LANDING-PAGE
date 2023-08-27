@@ -7,7 +7,7 @@ import { Button, Image, Navbar } from 'react-bootstrap';
 import { BagHeart } from 'react-bootstrap-icons';
 
 
-function Header() {
+function Header({isAuth}) {
     return(
         <Navbar bg="dark" data-bs-theme="dark" className='px-lg-3'>
             <Navbar.Brand>
@@ -27,12 +27,17 @@ function Header() {
                 </Button>
             </Navbar.Brand>
 
+            if(isAuth){
+                <Button variant='primary'>
+                <Link to='/userprofile' className="nav-link"/>
+                </Button>
+            }else{
             <Navbar.Brand>
                 <Button variant='primary'>
                     <Link to='/login' className="nav-link">Iniciar sesión</Link>
                 </Button>
             </Navbar.Brand>
-
+            }
             <Navbar.Brand>
                 <Link to='/checkout' className="nav-link">
                     <Button variant='warning'>
